@@ -6,7 +6,7 @@ function agregarAmigo() {
 
   if (nombre.length > 0) {
     amigos.push(nombre);
-    alert(`Amigo ${nombre} agregado`);
+    //alert(`Amigo ${nombre} agregado`);
     input.value = "";
 
     actualizarLista();
@@ -28,10 +28,10 @@ function actualizarLista() {
 }
 
 function sortearAmigo() {
-    if (amigos.length === 0) {
-        alert("No hay amigos para sortear. Por favor, agrega al menos uno.");
-        return;
-    }
+  if (amigos.length === 0) {
+    alert("No hay amigos para sortear. Por favor, agrega al menos uno.");
+    return;
+  }
   let indiceAleatorio = Math.floor(Math.random() * amigos.length);
   let amigoSorteado = amigos[indiceAleatorio];
 
