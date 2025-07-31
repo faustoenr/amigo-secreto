@@ -5,15 +5,12 @@ function agregarAmigo() {
   let nombre = input.value.trim();
 
   if (nombre.length > 0) {
-    amigos.push(nombre);
-    //alert(`Amigo ${nombre} agregado`);
+    amigos.push(nombre); //alert(`Amigo ${nombre} agregado`);
     input.value = "";
-
     actualizarLista();
   } else {
     alert("Por favor, ingresa un nombre");
-  }
-  //console.log(amigos);
+  } //console.log(amigos);
 }
 
 function actualizarLista() {
@@ -35,6 +32,6 @@ function sortearAmigo() {
   let indiceAleatorio = Math.floor(Math.random() * amigos.length);
   let amigoSorteado = amigos[indiceAleatorio];
 
-  let resultado = document.getElementById("resultado");
-  resultado.innerHTML = `El amigo sorteado es: <strong>${amigoSorteado}<strong><li>`;
+  let resultado = document.getElementById("resultado"); // Corregido: cerramos strong y quitamos el <li> fuera de lugar
+  resultado.innerHTML = `El amigo sorteado es: <strong>${amigoSorteado}</strong>`;
 }
