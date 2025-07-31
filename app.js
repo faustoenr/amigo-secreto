@@ -13,7 +13,7 @@ function agregarAmigo() {
   } else {
     alert("Por favor, ingresa un nombre");
   }
-  console.log(amigos);
+  //console.log(amigos);
 }
 
 function actualizarLista() {
